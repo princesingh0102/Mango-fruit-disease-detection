@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on mobile and desktop -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mango Fruit Disease Detection</title>
+
+    <!-- Connect our CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Main application container -->
+    <main class="container">
+
+        <!-- Website heading -->
+        <section class="hero">
+            <h1>Mango Fruit Disease Detection</h1>
+
+            <p>
+                Upload a mango fruit image and use our deep learning
+                model to identify the disease.
+            </p>
+        </section>
+
+
+        <!-- Image upload section -->
+        <section class="upload-card">
+
+            <h2>Upload Mango Fruit Image</h2>
+
+            <p class="upload-info">
+                Select a clear image of a mango fruit.
+            </p>
+
+            <!-- File input -->
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+            >
+
+            <!-- Image preview -->
+            <div id="previewContainer" class="preview-container">
+
+                <p id="previewText">
+                    Image preview will appear here
+                </p>
+
+                <img
+                    id="imagePreview"
+                    src=""
+                    alt="Selected mango fruit"
+                >
+
+            </div>
+
+
+            <!-- Predict button -->
+            <button id="predictButton" type="button">
+                Detect Disease
+            </button>
+
+        </section>
+
+
+        <!-- Prediction result section -->
+        <section id="resultCard" class="result-card">
+
+            <h2>Prediction Result</h2>
+
+            <p id="resultText">
+                Upload an image to see the prediction.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Connect JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
